@@ -1,0 +1,37 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?b66fec7d7de8ce727accd8e7d1ebfe91") format("truetype"),
+url("./flaticon.woff?b66fec7d7de8ce727accd8e7d1ebfe91") format("woff"),
+url("./flaticon.woff2?b66fec7d7de8ce727accd8e7d1ebfe91") format("woff2"),
+url("./flaticon.eot?b66fec7d7de8ce727accd8e7d1ebfe91#iefix") format("embedded-opentype"),
+url("./flaticon.svg?b66fec7d7de8ce727accd8e7d1ebfe91#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "development": "\f101",
+    "design": "\f102",
+    "online-shop": "\f103",
+);
+
+.flaticon-development:before {
+    content: map-get($flaticon-map, "development");
+}
+.flaticon-design:before {
+    content: map-get($flaticon-map, "design");
+}
+.flaticon-online-shop:before {
+    content: map-get($flaticon-map, "online-shop");
+}
